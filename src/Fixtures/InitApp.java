@@ -57,6 +57,18 @@ public class InitApp {
                     "primary key (id)" +
                     ")";
 
+    private static String createTableGoals =
+            "create table goals (" +
+                    "id int auto_increment," +
+                    "name varchar (255)," +
+                    "description varchar (255)," +
+                    "created datetime," +
+                    "updated datetime default null," +
+                    "primary key (id)" +
+                    ")";
+
+
+
 
     public static void main(String[] args) {
 
@@ -64,8 +76,9 @@ public class InitApp {
        // DbServicePFP.createDB();
 //        createTables(createTableUser);
 //        createTables(createTableUser_Group);
-        createTables(createTableExercise);
-        createTables(createTableSpecial);
+//        createTables(createTableExercise);
+//        createTables(createTableSpecial);
+        createTables(createTableGoals);
     }
 
 

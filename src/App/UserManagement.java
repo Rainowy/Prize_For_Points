@@ -1,5 +1,6 @@
 package App;
 
+import DAO.GoalsDAO;
 import DAO.UserDao;
 import DAO.UsergroupDAO;
 import Entity.User;
@@ -12,7 +13,7 @@ public class UserManagement {
     private static Scanner scan = new Scanner(System.in);
 
 
-    public static void addToDb() {
+    public static void addToDb(int userId, int userPoints) {
 
         System.out.println("Wprowadź nazwę użytkownika");
         String userName = scan.nextLine().trim();
@@ -56,7 +57,46 @@ public class UserManagement {
         newUser.setPassword(userPassword);
         newUser.setAge(age);
         newUser.setUsergroup(tmp);
+        if (userId != 0) {
+            newUser.setId(userId);
+            newUser.setUser_points(userPoints);
+        }
 
         UserDao.save(newUser);
+    }
+
+    public static void updateInDb() {
+        System.out.println("Podaj Id użytkownika, którego chcesz zmodyfikować");
+        while (!scan.hasNextInt()) {
+            scan.next();
+            System.out.println("Wpisz ID");
+        }
+        int userId = scan.nextInt();
+
+        System.out.println("Podaj aktualną ilość punktów");
+        while (!scan.hasNextInt()) {
+            scan.next();
+            System.out.println("Wpisz ilość punktów");
+        }
+        int userPoints = scan.nextInt();
+        scan.nextLine();
+
+        addToDb(userId, userPoints);
+    }
+
+    /** METODY MODYFIKUJĄCE BAZĘ */
+
+    public static void modifyColumn(){  //modyfikuje kolumnę
+
+        System.out.println("Wpisz nazwę kolumny do modyfikacji");
+
+        String columnName = scan.nextLine();
+
+        System.out.println("Wpisz typ tabeli(int, varchar itp.) i ew. dodatkowe parametry");
+
+        String columnType = scan.nextLine();
+
+        GoalsDAO.addColumn(columnName,columnType);
+
     }
 }

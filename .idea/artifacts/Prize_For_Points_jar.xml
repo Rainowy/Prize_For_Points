@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Prize_For_Points:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Prize_For_Points_jar</output-path>
+    <root id="archive" name="Prize_For_Points.jar">
+      <element id="module-output" name="Prize_For_Points" />
+      <element id="extracted-dir" path="$USER_HOME$/workspace/java libs/mysql-connector-java-8.0.13/mysql-connector-java-8.0.13.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

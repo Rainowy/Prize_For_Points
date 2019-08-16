@@ -29,6 +29,8 @@ public class UsergroupDAO {
 
     }
 
+   // public static void updateInDb()
+
     public static Usergroup getById(int id) {
 
         String query = "select * from user_group where id = ?;";

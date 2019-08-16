@@ -72,7 +72,7 @@ public class DbService {
 
         List<String[]> result = new ArrayList<>();
 
-        if(rs.next()){
+        while(rs.next()){
             String[] row = new String[metaData.getColumnCount()];
             for (int i = 1; i <=metaData.getColumnCount() ; i++) {   //iterujemy przez ilość kolumn
                 String columnName = metaData.getColumnName(i);      //pobieramy nazwę konkretnej kolumny
