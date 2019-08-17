@@ -65,11 +65,10 @@ public class ExerciseManagement {
         String mojeCele = "MOJE CELE";
         Main.printInfo(mojeCele);
         List<String[]> data2 = GoalsDAO.getBasicGoalsBasedOnUserId(getCurrentUser().getId());
-        for(String[] s : data2){
-            if(Integer.valueOf(s[0]) < 10) {
+        for (String[] s : data2) {
+            if (Integer.valueOf(s[0]) < 10) {
                 System.out.println("id " + " " + s[0] + " PUNKTY: " + s[2] + "      UTWORZONO: " + s[3] + "      NAZWA: " + s[1]);
-            }
-            else{
+            } else {
                 System.out.println("id " + s[0] + " PUNKTY: " + s[2] + "      UTWORZONO: " + s[3] + "      NAZWA: " + s[1]);
             }
 
@@ -78,29 +77,41 @@ public class ExerciseManagement {
         // TODO: 10.08.19
 
         // TODO: 09.08.19 jeśli nie występuje w bazie, to wywali błąd, zabezpieczyć go
-        int goals_id =0;
-        int  nr;
+        //int goals_id =0;
+        int nr;
         do {
             while (!scan.hasNextInt()) {
                 scan.next();
                 System.out.println("Musisz wpisać cyfry");
             }
-            nr =scan.nextInt();
-           // scan.nextLine();
-            if(nr !=0){
-                goals_id = nr;
-            }
-            else{
-                GoalsManagement.addToDb();
-
-            }
-
-
+            nr = scan.nextInt();
+            //goals_id =scan.nextInt();
+            // scan.nextLine();
+//            if( nr != 0){
+//                goals_id = scan.nextInt();
+//            }
+//            else{
+//                GoalsManagement.addToDb();
+//
+//
         }
 
-        while (nr > 100 && nr !=0);      // TODO: 09.08.19 walidacja czy id isnieje w bazie
-        System.out.println("NEW GOAL ID " + goals_id);
-        goals_id = GoalsDAO.getNewGoalId();
+        while (nr != 8 && nr != 0);      // TODO: 09.08.19 walidacja czy id isnieje w bazie
+
+        if (nr == 0) {
+            GoalsManagement.addToDb();
+            nr = GoalsDAO.getNewGoalId();
+        }
+//        if(nr ==0) {
+//            GoalsManagement.addToDb();
+//        }
+//        else {
+//            nr = GoalsDAO.getNewGoalId();
+//
+//        }
+
+
+        System.out.println("NEW GOAL IDeeeeeeeeeeooooooooooo " + nr);
 
         ExerciseDAO exDAO = new ExerciseDAO();
         Exercise newExercise = new Exercise();
@@ -108,11 +119,11 @@ public class ExerciseManagement {
         newExercise.setCreated(date);
         newExercise.setExe_points(points);
         newExercise.setUser(currentUser);
-        newExercise.setGoal(GoalsDAO.getById(goals_id));
+        newExercise.setGoal(GoalsDAO.getById(nr));
+// TODO: 16.08.19 sprawdzić czemu się to wywala i nie uzupełńia punktów
+        exDAO.setCurrentUser(newExercise, currentUser);
 
-       exDAO.setCurrentUser(newExercise,currentUser);
-
-       GoalsDAO.updateUser_Points_InDb(newExercise.getExe_points(),newExercise.getGoal().getId());
+        GoalsDAO.updateUser_Points_InDb(newExercise.getExe_points(), newExercise.getGoal().getId());
 
 
     }
