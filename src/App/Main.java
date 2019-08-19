@@ -292,7 +292,7 @@ public class Main {
             System.out.println("Dodano CEL, teraz możesz dodać ZADANIE ");
             System.out.println();
         }
-        ExerciseManagement.addToDb();
+        ExerciseManagement.collectDataAndSave();
 
 
     }

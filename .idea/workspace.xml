@@ -11,8 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6b560539-43c6-4d9e-bcb1-841074adf228" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/App/ExerciseManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ExerciseManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/GoalsManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/GoalsManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/ExerciseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/ExerciseDAO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,9 +85,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="exercise" value="6" />
+          <entry key="exercise" value="7" />
           <entry key="goals" value="4" />
-          <entry key="java" value="65" />
+          <entry key="java" value="66" />
           <entry key="special" value="1" />
           <entry key="sql" value="8" />
           <entry key="user" value="6" />
@@ -96,22 +96,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="19" />
-          <entry key="JAVA" value="65" />
+          <entry key="Database Element" value="20" />
+          <entry key="JAVA" value="66" />
           <entry key="Scratch" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="51" />
-          <entry key="java" value="23214" />
+          <entry key="java" value="23711" />
           <entry key="sql" value="776" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="23214" />
+          <entry key="JAVA" value="23711" />
           <entry key="PLAIN_TEXT" value="16" />
           <entry key="SQL" value="165" />
           <entry key="Scratch" value="662" />
@@ -121,6 +121,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DAO/ExerciseDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="71" column="66" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/GoalsDAO.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -162,13 +174,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAO/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1672">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+        <entry file="das://4e58cd0c-b39b-47f5-b064-505c64984870/schema/prize_for_points/table/exercise">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -176,8 +185,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+            <state relative-caret-position="476">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -188,26 +197,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/ExerciseManagement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="922">
-              <caret line="151" column="13" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
+            <state relative-caret-position="570">
+              <caret line="145" column="99" selection-start-line="145" selection-start-column="99" selection-end-line="145" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#439#440#0" expanded="true" />
                 <element signature="e#473#474#0" expanded="true" />
                 <element signature="e#532#533#0" expanded="true" />
                 <element signature="e#592#593#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App/UserGroupManagement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#974#1001#0" />
               </folding>
             </state>
           </provider>
@@ -225,8 +223,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/GoalsManagement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+            <state relative-caret-position="374">
+              <caret line="52" column="99" lean-forward="true" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -248,6 +246,7 @@
       <find>update</find>
       <find>exDAO</find>
       <find>id</find>
+      <find>kjl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -268,12 +267,12 @@
         <option value="$PROJECT_DIR$/src/App/UserManagement.java" />
         <option value="$PROJECT_DIR$/src/DAO/UserDao.java" />
         <option value="$PROJECT_DIR$/src/Entity/Exercise.java" />
-        <option value="$PROJECT_DIR$/src/DAO/ExerciseDAO.java" />
         <option value="$PROJECT_DIR$/src/Entity/Goals.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4e58cd0c-b39b-47f5-b064-505c64984870/console.sql" />
         <option value="$PROJECT_DIR$/src/DAO/GoalsDAO.java" />
-        <option value="$PROJECT_DIR$/src/App/GoalsManagement.java" />
         <option value="$PROJECT_DIR$/src/App/Main.java" />
+        <option value="$PROJECT_DIR$/src/App/GoalsManagement.java" />
+        <option value="$PROJECT_DIR$/src/DAO/ExerciseDAO.java" />
         <option value="$PROJECT_DIR$/src/App/ExerciseManagement.java" />
       </list>
     </option>
@@ -350,9 +349,9 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566213809084" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566219865589" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="extract.method.default.visibility" value="public" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -429,12 +428,12 @@
       <workItem from="1565414070253" duration="12540000" />
       <workItem from="1565970966494" duration="7823000" />
       <workItem from="1566017376329" duration="2003000" />
-      <workItem from="1566204907753" duration="10349000" />
+      <workItem from="1566204907753" duration="14635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136694000" />
+    <option name="totallyTimeSpent" value="140980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="2560" height="1415" extended-state="6" />
@@ -448,15 +447,15 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4956245" weight="0.3618677" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49960223" weight="0.3299611" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4944312" visible="true" weight="0.3618677" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49681783" weight="0.3291829" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5043755" side_tool="true" visible="true" weight="0.3618677" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49642006" weight="0.3291829" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5055688" side_tool="true" visible="true" weight="0.3618677" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.4988067" weight="0.3291829" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49960223" weight="0.3291829" />
@@ -569,16 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/ExerciseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/UsergroupDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -586,13 +575,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4e58cd0c-b39b-47f5-b064-505c64984870/schema/prize_for_points/table/exercise">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -623,13 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://4e58cd0c-b39b-47f5-b064-505c64984870/schema/prize_for_points/table/goals">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e58cd0c-b39b-47f5-b064-505c64984870/console_1.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -652,16 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/GoalsManagement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/UserManagement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1300">
@@ -672,24 +637,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://4e58cd0c-b39b-47f5-b064-505c64984870/schema/prize_for_points/table/goals">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4e58cd0c-b39b-47f5-b064-505c64984870/schema/prize_for_points/table/exercise">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/ExerciseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="71" column="66" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/GoalsManagement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="52" column="99" lean-forward="true" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="99" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/ExerciseManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="922">
-          <caret line="151" column="13" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
+        <state relative-caret-position="570">
+          <caret line="145" column="99" selection-start-line="145" selection-start-column="99" selection-end-line="145" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#439#440#0" expanded="true" />
             <element signature="e#473#474#0" expanded="true" />
             <element signature="e#532#533#0" expanded="true" />
             <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#974#1001#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        <state relative-caret-position="476">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

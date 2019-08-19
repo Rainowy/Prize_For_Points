@@ -69,7 +69,7 @@ public class ExerciseDAO {
     /**Poboera podstawowe dane na temat zadania na podstawia id **/
     public static List<String[]> getBasicExerciseBasedOnUserId (int id){
 
-        String query= "select id, description, exe_points from exercise where user_id =?;";
+        String query= "select id, description, exe_points, created from exercise where user_id =?;";
         String [] params = {String.valueOf(id)};
         List<String[]> data = DbServicePFP.getData(query, params);
 
