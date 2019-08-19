@@ -17,15 +17,15 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static User currentUser;
-
-    public static User getCurrentUser() {
-        return currentUser;
-    }
-
-    public static void setCurrentUser(User currentUser) {
-        Main.currentUser = currentUser;
-    }
+//    private static User currentUser;
+//
+//    public static User getCurrentUser() {
+//        return currentUser;
+//    }
+//
+//    public static void setCurrentUser(User currentUser) {
+//        Main.currentUser = currentUser;
+//    }
 
     private static Scanner scan = new Scanner(System.in);
 
@@ -38,7 +38,7 @@ public class Main {
         // TODO: 09.08.19 zaopatrzyć wyjątki: gdy złe hasło itp
 
 
-      //  System.out.println(ExerciseManagement.goalExistsInDb(9));
+        //  System.out.println(ExerciseManagement.goalExistsInDb(9));
         //feftchUser();
         //  UserGroupManagement.addNewGroup();
 //
@@ -145,7 +145,7 @@ public class Main {
 //        System.out.println("CURRENT USER: " + exDAO.getCurrentUser());
 
         User user = feftchUser();
-        setCurrentUser(user);                       //ustawia currentUser w tych klasach
+       // setCurrentUser(user);                       //ustawia currentUser w tych klasach
         ExerciseManagement.setCurrentUser(user);
 
 
@@ -252,59 +252,32 @@ public class Main {
             }
             switch (answer) {
                 case 1:
-                    addNewExercise();
 
+                    addNewExercise();
                     break;
                 case 2:
+
                     GoalsManagement.addToDb();
                     break;
+
                 case 3:
-//                    List<String[]> data = GoalsDAO.getAllFromGoalsBasedOnUserId(currentUser.getId());
-//                    for (String[] s : data) {
-//                        System.out.println(Arrays.toString(s));
-//                    }
-                    /**Pobiera id, opis i liczbę punktów z zadań dodanych przez użytkownika i wyświetla**/
-                    String mojeZadania = "MOJE ZADANIA";
-                    printInfo(mojeZadania);
-                    List<String[]> data = ExerciseDAO.getBasicExerciseBasedOnUserId(getCurrentUser().getId());
-                    for(String[] s : data){
-                        if (Integer.valueOf(s[0])<10) {
-                            System.out.println("id " + " " + s[0] + " PUNKTY: " + s[2] + " OPIS: " + s[1]);
-                        }
-                        else{
-                            System.out.println("id "+s[0] + " PUNKTY: " + s[2] + " OPIS: " + s[1]);
-                        }
-                    }
+//
+                    ExerciseManagement.printMyExercises();
                     System.out.println();
                     break;
+
                 case 4:
-                    // TODO: 16.08.19 zmodyfikować żeby pobierało listę wszystkich celów  lub celu przyporządkowanego do id = połączyć q do wielu z userem ale lepiej będzie dodać kolumnę z user id i w niej będzi zapisywany current user
-                    /**Pobiera id, opis i liczbę punktów z celów dodanych przez użytkownika i wyświetla**/
-                    String mojeCele = "MOJE CELE";
-                    printInfo(mojeCele);
-                    List<String[]> data2 = GoalsDAO.getBasicGoalsBasedOnUserId(getCurrentUser().getId());
-                    for(String[] s : data2){
-                        if(Integer.valueOf(s[0]) < 10) {
-                            System.out.println("id " + " " + s[0] + " PUNKTY: " + s[2] + "      UTWORZONO: " + s[3] + "      NAZWA: " + s[1]);
-                        }
-                        else{
-                            System.out.println("id " + s[0] + " PUNKTY: " + s[2] + "      UTWORZONO: " + s[3] + "      NAZWA: " + s[1]);
-                        }
-
-                    }
+//
+                    GoalsManagement.printMyGoals();
                     System.out.println();
-
                     break;
-
             }
-
         }
-        while (answer !=0);
-
-
+        while (answer != 0);
 
 
     }
+
 
     public static void addNewExercise() {
 
@@ -320,7 +293,6 @@ public class Main {
             System.out.println();
         }
         ExerciseManagement.addToDb();
-
 
 
     }
@@ -350,10 +322,12 @@ public class Main {
 
     }
 
-    /** Metoda wyświetlająca nmapisyu w ładny sposób **/ // TODO: 10.08.19 przekształcić, żeby to ładnie wyglądało
+    /**
+     * Metoda wyświetlająca nmapisyu w ładny sposób
+     **/ // TODO: 10.08.19 przekształcić, żeby to ładnie wyglądało
     public static void printInfo(String input) {
         /**Wyświetla napis menu **/
-        String stringTest = "         X        "+input+"       X";
+        String stringTest = "         X        " + input + "       X";
 
         String str = "         X";
         for (int i = 0; i < stringTest.length() - 10; i++) {

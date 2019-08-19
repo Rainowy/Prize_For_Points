@@ -3,6 +3,7 @@ package App;
 import DAO.GoalsDAO;
 import Entity.Goals;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class GoalsManagement {
@@ -37,6 +38,21 @@ public class GoalsManagement {
         GoalsDAO.save(newGoal);
 
 
+    }
+
+    public static void printMyGoals() {
+        /**Pobiera id, opis i liczbę punktów z celów dodanych przez użytkownika i wyświetla**/
+
+        String myGoals = "MOJE CELE";
+        Main.printInfo(myGoals);
+        List<String[]> data2 = GoalsDAO.getBasicGoalsBasedOnUserId(ExerciseManagement.getCurrentUser().getId());
+        for (String[] s : data2) {
+            if (Integer.valueOf(s[0]) < 10) {
+                System.out.println("id " + " " + s[0] + " PUNKTY: " + s[2] + "      UTWORZONO: " + s[3] + "      NAZWA: " + s[1]);
+            } else {
+                System.out.println("id " + s[0] + " PUNKTY: " + s[2] + "      UTWORZONO: " + s[3] + "      NAZWA: " + s[1]);
+            }
+        }
     }
 
     public static void addColumn(){

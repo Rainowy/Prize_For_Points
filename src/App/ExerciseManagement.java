@@ -61,19 +61,9 @@ public class ExerciseManagement {
 //            System.out.println(g);
 //        }
 
-        // TODO: 10.08.19 WYCIĄGNĄĆ TO DO METODY I WSTAWIĆ DO GOALS MANAGEMENT 
-        /**Pobiera id, opis i liczbę punktów z celów dodanych przez użytkownika i wyświetla**/
-        String mojeCele = "MOJE CELE";
-        Main.printInfo(mojeCele);
-        List<String[]> data2 = GoalsDAO.getBasicGoalsBasedOnUserId(getCurrentUser().getId());
-        for (String[] s : data2) {
-            if (Integer.valueOf(s[0]) < 10) {
-                System.out.println("id " + " " + s[0] + " PUNKTY: " + s[2] + "      UTWORZONO: " + s[3] + "      NAZWA: " + s[1]);
-            } else {
-                System.out.println("id " + s[0] + " PUNKTY: " + s[2] + "      UTWORZONO: " + s[3] + "      NAZWA: " + s[1]);
-            }
 
-        }
+        GoalsManagement.printMyGoals(); //Metoda wyświetlająca cele
+
         System.out.println();
         // TODO: 10.08.19
 
@@ -133,10 +123,24 @@ public class ExerciseManagement {
 
     }
 
-    /**
-     * Metoda sprawdza czy cel istnieje w bazie
-     **/
+    public static void printMyExercises() {
+        /**Pobiera id, opis i liczbę punktów z zadań dodanych przez użytkownika i wyświetla**/
+
+        String myExercises = "MOJE ZADANIA";
+        Main.printInfo(myExercises);
+        List<String[]> data = ExerciseDAO.getBasicExerciseBasedOnUserId(getCurrentUser().getId());
+        for (String[] s : data) {
+            if (Integer.valueOf(s[0]) < 10) {
+                System.out.println("id " + " " + s[0] + " PUNKTY: " + s[2] + " OPIS: " + s[1]);
+            } else {
+                System.out.println("id " + s[0] + " PUNKTY: " + s[2] + " OPIS: " + s[1]);
+            }
+        }
+    }
+
+
     public static boolean goalExistsInDb(int goalIdFromInput) {
+        /** Metoda sprawdza czy cel istnieje w bazie  **/
 
         boolean goalExistsInDb = false;
 
@@ -149,5 +153,4 @@ public class ExerciseManagement {
         }
         return goalExistsInDb;
     }
-
 }
