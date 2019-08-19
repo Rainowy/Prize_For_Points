@@ -45,6 +45,7 @@ public class GoalsManagement {
 
         String myGoals = "MOJE CELE";
         Main.printInfo(myGoals);
+        System.out.println();
         List<String[]> data2 = GoalsDAO.getBasicGoalsBasedOnUserId(ExerciseManagement.getCurrentUser().getId());
         for (String[] s : data2) {
             if (Integer.valueOf(s[0]) < 10) {

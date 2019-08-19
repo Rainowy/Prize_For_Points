@@ -84,7 +84,7 @@ public class ExerciseManagement {
     }
 
     private static void saveToDb(String description, int points, int goalIdFromInput) {
-       /** Z pobranych wcześniej danych tworzy obiekt i zapisuje do bazy **/
+        /** Z pobranych wcześniej danych tworzy obiekt i zapisuje do bazy **/
 
         ExerciseDAO exDAO = new ExerciseDAO();
         Exercise newExercise = new Exercise();
@@ -136,13 +136,12 @@ public class ExerciseManagement {
 
         String myExercises = "MOJE ZADANIA";
         Main.printInfo(myExercises);
+        System.out.println();
         List<String[]> data = ExerciseDAO.getBasicExerciseBasedOnUserId(getCurrentUser().getId());
         for (String[] s : data) {
             if (Integer.valueOf(s[0]) < 10) {
-              //  System.out.println("id " + " " + s[0] + " PUNKTY: " + s[2] + " OPIS: " + s[1]);
                 System.out.println("id " + " " + s[0] + " PUNKTY: " + s[2] + "    UTWORZONO: " + s[3] + "    OPIS: " + s[1]);
             } else {
-                //System.out.println("id " + s[0] + " PUNKTY: " + s[2] + " OPIS: " + s[1]);
                 System.out.println("id " + s[0] + " PUNKTY: " + s[2] + "    UTWORZONO: " + s[3] + "    OPIS: " + s[1]);
             }
         }

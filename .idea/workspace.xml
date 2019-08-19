@@ -6,13 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/App/Main.java" line="348" mnemonic="0" />
+    <bookmark url="file://$PROJECT_DIR$/src/App/Main.java" line="183" mnemonic="0" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b560539-43c6-4d9e-bcb1-841074adf228" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/App/ExerciseManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/ExerciseManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/GoalsManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/GoalsManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/ExerciseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/ExerciseDAO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,7 +87,7 @@
         <counts>
           <entry key="exercise" value="7" />
           <entry key="goals" value="4" />
-          <entry key="java" value="66" />
+          <entry key="java" value="67" />
           <entry key="special" value="1" />
           <entry key="sql" value="8" />
           <entry key="user" value="6" />
@@ -97,22 +97,23 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="20" />
-          <entry key="JAVA" value="66" />
+          <entry key="JAVA" value="67" />
           <entry key="Scratch" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="51" />
-          <entry key="java" value="23711" />
+          <entry key="dummy" value="41" />
+          <entry key="java" value="24413" />
           <entry key="sql" value="776" />
           <entry key="txt" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="23711" />
-          <entry key="PLAIN_TEXT" value="16" />
+          <entry key="JAVA" value="24413" />
+          <entry key="PLAIN_TEXT" value="57" />
           <entry key="SQL" value="165" />
           <entry key="Scratch" value="662" />
         </counts>
@@ -124,7 +125,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/ExerciseDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
+            <state relative-caret-position="1516">
               <caret line="71" column="66" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -145,11 +146,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e58cd0c-b39b-47f5-b064-505c64984870/console_1.sql">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -185,8 +181,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="660">
+              <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App/UserGroupManagement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -197,8 +205,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/ExerciseManagement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="145" column="99" selection-start-line="145" selection-start-column="99" selection-end-line="145" selection-end-column="99" />
+            <state relative-caret-position="2772">
+              <caret line="138" column="29" selection-start-line="138" selection-start-column="29" selection-end-line="138" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#439#440#0" expanded="true" />
@@ -223,8 +231,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App/GoalsManagement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="52" column="99" lean-forward="true" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="99" />
+            <state relative-caret-position="438">
+              <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -270,10 +278,10 @@
         <option value="$PROJECT_DIR$/src/Entity/Goals.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4e58cd0c-b39b-47f5-b064-505c64984870/console.sql" />
         <option value="$PROJECT_DIR$/src/DAO/GoalsDAO.java" />
-        <option value="$PROJECT_DIR$/src/App/Main.java" />
-        <option value="$PROJECT_DIR$/src/App/GoalsManagement.java" />
         <option value="$PROJECT_DIR$/src/DAO/ExerciseDAO.java" />
         <option value="$PROJECT_DIR$/src/App/ExerciseManagement.java" />
+        <option value="$PROJECT_DIR$/src/App/GoalsManagement.java" />
+        <option value="$PROJECT_DIR$/src/App/Main.java" />
       </list>
     </option>
   </component>
@@ -349,7 +357,7 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566219865589" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566233875819" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -428,18 +436,18 @@
       <workItem from="1565414070253" duration="12540000" />
       <workItem from="1565970966494" duration="7823000" />
       <workItem from="1566017376329" duration="2003000" />
-      <workItem from="1566204907753" duration="14635000" />
+      <workItem from="1566204907753" duration="23002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140980000" />
+    <option name="totallyTimeSpent" value="149347000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="2560" height="1415" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12808274" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12808274" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -448,14 +456,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49960223" weight="0.3299611" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4944312" visible="true" weight="0.3618677" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49403343" visible="true" weight="0.3618677" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49642006" weight="0.3291829" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5055688" side_tool="true" visible="true" weight="0.3618677" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49602228" weight="0.3291829" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5059666" side_tool="true" visible="true" weight="0.3618677" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="11" sideWeight="0.4988067" weight="0.3291829" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49960223" weight="0.3291829" />
@@ -466,7 +474,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.12052506" />
+      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.12768497" />
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
   </component>
@@ -595,16 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/UserGroupManagement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e58cd0c-b39b-47f5-b064-505c64984870/console_1.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -644,17 +642,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://4e58cd0c-b39b-47f5-b064-505c64984870/schema/prize_for_points/table/exercise">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/DAO/ExerciseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1516">
+          <caret line="71" column="66" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/ExerciseDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/App/UserGroupManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="71" column="66" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
+        <state relative-caret-position="176">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -663,8 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/GoalsManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="52" column="99" lean-forward="true" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="99" />
+        <state relative-caret-position="438">
+          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -673,8 +674,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/ExerciseManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="145" column="99" selection-start-line="145" selection-start-column="99" selection-end-line="145" selection-end-column="99" />
+        <state relative-caret-position="2772">
+          <caret line="138" column="29" selection-start-line="138" selection-start-column="29" selection-end-line="138" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#439#440#0" expanded="true" />
@@ -686,10 +687,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://4e58cd0c-b39b-47f5-b064-505c64984870/schema/prize_for_points/table/exercise">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="660">
+          <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
