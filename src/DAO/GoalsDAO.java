@@ -1,5 +1,6 @@
 package DAO;
 
+import App.ExerciseManagement;
 import Entity.Goals;
 import Services.DbService;
 import Services.DbServicePFP;
@@ -28,11 +29,12 @@ public class GoalsDAO {
 
     public static void addToDb(Goals goal) {
 
-        String query = "insert into goals values (null,?,?,?,null,0,0);";
-        String[] params = new String[3];
+        String query = "insert into goals values (null,?,?,?,null,0,0,?);";
+        String[] params = new String[4];
         params[0] = goal.getName();
         params[1] = goal.getDescription();
         params[2] = String.valueOf(goal.getCreated());
+        params[3] = String.valueOf(ExerciseManagement.getCurrentUser().getId());    //pobiera Id aktualnego użytkownika i wstawia do kolumny user_id
 
 
         newGoalId = DbServicePFP.executeInsert(query, params);
@@ -137,9 +139,9 @@ public class GoalsDAO {
     public static List<String[]> getBasicGoalsBasedOnUserId(int id) {
 
         // String query = "select goals.id, name, user_points, e.created from goals join exercise e on goals.id = e.goals_id where user_id =?;";
-        String query = "select goals.id, name, user_points, e.created from goals join exercise e on goals.id = e.goals_id;";
+        String query = "select id, name, user_points, created from goals where user_id=?";
         String[] params = {String.valueOf(id)};
-        List<String[]> data = DbServicePFP.getData(query, null);
+        List<String[]> data = DbServicePFP.getData(query, params);
 
         return data;
     }

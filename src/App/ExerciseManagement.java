@@ -50,6 +50,7 @@ public class ExerciseManagement {
             System.out.println("Musisz wpisać cyfry");
         }
         int points = scan.nextInt();
+        scan.nextLine();
         System.out.println("Przyporządkuj zadanie do swojego celu, punkty z zadania będą sumowane w wybranym celu");
         System.out.println();
         System.out.println("Wybierz NUMER ID celu lub wciśnij 0 aby dodać nowy");
