@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 public class GoalsDAO {
 
     public static int newGoalId;
@@ -24,7 +23,7 @@ public class GoalsDAO {
         } else {
             //updateInDb(goal);
         }
-       // return addToDb(goal);
+        // return addToDb(goal);
     }
 
     public static void addToDb(Goals goal) {
@@ -46,15 +45,16 @@ public class GoalsDAO {
     public static void updateUser_Points_InDb(int points, int id) { // TODO: 09.08.19 przerobić na pełny update a nie tylko punkty
 
         String query = "update goals set user_points = ? where id =?;";
-        String [] params = new String[2];
+        String[] params = new String[2];
         params[0] = String.valueOf(points);
         params[1] = String.valueOf(id);
-        DbServicePFP.executeQuery(query,params);
+        DbServicePFP.executeQuery(query, params);
     }
 
 
     /**
-     * Pobiera listę ze wszystkimi celami (Zwraca listę)**/
+     * Pobiera listę ze wszystkimi celami (Zwraca listę)
+     **/
     public static List<String[]> getData() {
 
         String query = "select * from goals;";
@@ -64,7 +64,9 @@ public class GoalsDAO {
         return data;
     }
 
-    /** Pobiera pojedynczy cel na podstawie ID**/
+    /**
+     * Pobiera pojedynczy cel na podstawie ID
+     **/
     public static Goals getById(int id) {
 
         String query = "select * from goals where id = ?;";
@@ -78,14 +80,18 @@ public class GoalsDAO {
         return getGoal(firstRow);
 
     }
-    /**Pobiera goal_id na podstawie user_id z exercise**/
-    public static List<String[]> getFromGoalsBasedOnUserId(int id){
+
+    /**
+     * Pobiera goal_id na podstawie user_id z exercise
+     **/
+    public static List<String[]> getFromGoalsBasedOnUserId(int id) {
         String query = "select goals_id from exercise join goals g on exercise.goals_id = g.id where user_id =?";
         String params[] = {String.valueOf(id)};
         List<String[]> data = DbServicePFP.getData(query, params);
 
         return data;
     }
+
     public static List<String[]> getAllFromGoalsBasedOnUserId(int id) {
         String query = "select * from exercise join goals g on exercise.goals_id = g.id where user_id =?";
         String params[] = {String.valueOf(id)};
@@ -114,21 +120,23 @@ public class GoalsDAO {
         return newGoal;
     }
 
-    /** Pobiera wszystie obiekty Goal (Zwraca obiekty) **/
-    public static List<Goals> getAllGoals (){
+    /**
+     * Pobiera wszystie obiekty Goal (Zwraca obiekty)
+     **/
+    public static List<Goals> getAllGoals() {
 
         List<Goals> goalsList = new ArrayList<>();
 
-        for(String[] s: getData()){
+        for (String[] s : getData()) {
             Goals goal = getGoal(s);    // odwołuje się do metody getGoal która zwraca pojedynczy obiekt Goal
             goalsList.add(goal);
         }
         return goalsList;
     }
 
-    public static List<String[]> getBasicGoalsBasedOnUserId (int id){
+    public static List<String[]> getBasicGoalsBasedOnUserId(int id) {
 
-       // String query = "select goals.id, name, user_points, e.created from goals join exercise e on goals.id = e.goals_id where user_id =?;";
+        // String query = "select goals.id, name, user_points, e.created from goals join exercise e on goals.id = e.goals_id where user_id =?;";
         String query = "select goals.id, name, user_points, e.created from goals join exercise e on goals.id = e.goals_id;";
         String[] params = {String.valueOf(id)};
         List<String[]> data = DbServicePFP.getData(query, null);
@@ -136,8 +144,17 @@ public class GoalsDAO {
         return data;
     }
 
+    /**
+     Pobiera tylko id wszystkich celów
+     **/
 
+    public static List<String[]> getAllGoalsId() {
 
+        String query = "select id from goals";
+        List<String[]> allGoalsId = DbServicePFP.getData(query, null);
+
+        return allGoalsId;
+    }
 
 
     /** METODY MODYFIKUJĄCE TABELĘ */

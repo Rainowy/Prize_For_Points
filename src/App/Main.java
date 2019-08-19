@@ -38,6 +38,7 @@ public class Main {
         // TODO: 09.08.19 zaopatrzyć wyjątki: gdy złe hasło itp
 
 
+      //  System.out.println(ExerciseManagement.goalExistsInDb(9));
         //feftchUser();
         //  UserGroupManagement.addNewGroup();
 //
