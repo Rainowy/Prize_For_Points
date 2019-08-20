@@ -33,7 +33,7 @@ public class GoalsManagement {
         newGoal.setDescription(description);
         newGoal.setCreated(date);
 
-        System.out.println("          NOWY CEL ZOSTAŁ DODANY!");
+        System.out.println("                 NOWY CEL ZOSTAŁ DODANY!");
 
         GoalsDAO.save(newGoal);
 

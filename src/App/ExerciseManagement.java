@@ -140,9 +140,11 @@ public class ExerciseManagement {
         List<String[]> data = ExerciseDAO.getBasicExerciseBasedOnUserId(getCurrentUser().getId());
         for (String[] s : data) {
             if (Integer.valueOf(s[0]) < 10) {
-                System.out.println("id " + " " + s[0] + " PUNKTY: " + s[2] + "    UTWORZONO: " + s[3] + "    OPIS: " + s[1]);
+                //  System.out.println("id " + " " + s[0] + " PUNKTY: " + s[2] + "    UTWORZONO: " + s[3] + "    OPIS: " + s[1]);
+                System.out.println("PUNKTY: " + s[2] + "    UTWORZONO: " + s[3] + "    OPIS: " + s[1]);
             } else {
-                System.out.println("id " + s[0] + " PUNKTY: " + s[2] + "    UTWORZONO: " + s[3] + "    OPIS: " + s[1]);
+                //System.out.println("id " + s[0] + " PUNKTY: " + s[2] + "    UTWORZONO: " + s[3] + "    OPIS: " + s[1]);
+                System.out.println("PUNKTY: " + s[2] + "    UTWORZONO: " + s[3] + "    OPIS: " + s[1]);
             }
         }
     }

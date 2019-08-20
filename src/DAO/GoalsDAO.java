@@ -39,18 +39,28 @@ public class GoalsDAO {
 
         newGoalId = DbServicePFP.executeInsert(query, params);
         goal.setId(newGoalId);
-        System.out.println("GOAL ID NEW TOL " + newGoalId);
 
         //return newId;   // zwraca ID nowego celu
     }
 
-    public static void updateUser_Points_InDb(int points, int id) { // TODO: 09.08.19 przerobić na pełny update a nie tylko punkty
+    public static void updateUser_Points_InDb(int inputPoints, int id) { // TODO: 09.08.19 przerobić na pełny update a nie tylko punkty
+
+        int sumPoints = getSumPoints(inputPoints, id);
 
         String query = "update goals set user_points = ? where id =?;";
         String[] params = new String[2];
-        params[0] = String.valueOf(points);
+        params[0] = String.valueOf(sumPoints);
         params[1] = String.valueOf(id);
         DbServicePFP.executeQuery(query, params);
+    }
+
+    private static int getSumPoints(int inputPoints, int id) {
+
+        String getGoalPoints = "select user_points from goals where id =?;";
+        String[] params1 = {String.valueOf(id)};
+        List<String[]> goalPoints = DbServicePFP.getData(getGoalPoints, params1);
+        String[] firstRow = goalPoints.get(0);
+        return Integer.valueOf(firstRow[0]) + inputPoints;
     }
 
 
@@ -139,7 +149,7 @@ public class GoalsDAO {
     public static List<String[]> getBasicGoalsBasedOnUserId(int id) {
 
         // String query = "select goals.id, name, user_points, e.created from goals join exercise e on goals.id = e.goals_id where user_id =?;";
-        String query = "select id, name, user_points, created from goals where user_id=?";
+        String query = "select id, name, user_points, created, updated from goals where user_id=?";
         String[] params = {String.valueOf(id)};
         List<String[]> data = DbServicePFP.getData(query, params);
 

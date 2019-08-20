@@ -3,6 +3,8 @@ package App;
 import DAO.GoalsDAO;
 import DAO.UserDao;
 import Entity.User;
+import com.sun.xml.internal.bind.v2.TODO;
+
 import java.util.Scanner;
 
 public class Main {
@@ -12,6 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // TODO: 19.08.19 USUNĄĆ BŁĄÐ PRZY PONOWNYM WPISYWANIU NOWEGO ZADANIA = ZNOWU BŁĄD Z SCAN.NEXTLINE !!! 
 
         // TODO: 09.08.19 zrobić początek z informowaniem o konieczności dodania celów, pomyśleć nad zadaniami specjalnymi
 
@@ -59,16 +62,17 @@ public class Main {
             System.out.println("               Wciśnij 2 aby dodać nowy cel");
             System.out.println("               Wciśnij 3 aby zobaczyć swoje zadania");
             System.out.println("               Wciśnij 4 aby zobaczyć swoje cele");
+            System.out.println("               Wciśnij 5 aby wyświetlić punkty");
             System.out.println("               Wciśnij 0 aby wyjść z programu");
 
-            while (!scan.hasNext()) {
+            while (!scan.hasNextInt()) {
                 scan.next();
                 System.out.println("Wprowadź tylko cyfry w podanym zakresie");
             }
 
             answer = scan.nextInt();
-            scan.nextLine();
-            if (answer != 1 && answer != 2 && answer != 3 && answer != 4) {
+            //scan.nextLine();  todo sprawdzi czy to musi tu być
+            if (answer != 1 && answer != 2 && answer != 3 && answer != 4 && answer != 5 && answer != 0) {
                 System.out.println("Wprowadź tylko cyfry w podanym zakresie");
             }
             switch (answer) {
@@ -90,6 +94,12 @@ public class Main {
                 case 4:
 
                     GoalsManagement.printMyGoals();
+                    System.out.println();
+                    break;
+
+                case 5:
+                    String stringTest = "ZALOGOWANY JAKO " + ExerciseManagement.getCurrentUser().getName() + " AKTUALNA LICZBA PUNKTÓW " + ExerciseManagement.getCurrentUser().getUser_points();
+                    printInfo(stringTest);
                     System.out.println();
                     break;
             }
